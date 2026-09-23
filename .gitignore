@@ -1,0 +1,28 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+*.env
+
+# Security, Credentials & Logs
+secrets.json
+credentials.json
+*.log
+*.db
+threat_logs.db
+ngrok.yml
+
+# OS & IDE temporary files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Binaries & Large archives
+ngrok
+*.tgz
+*.zip
+*.apk
+scrcpy-win64-v2.4/
