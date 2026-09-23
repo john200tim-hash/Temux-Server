@@ -2,7 +2,7 @@
 title Tecno Server - Screen Mirror
 color 0D
 set PHONE_IP=192.168.1.126
-set SCRCPY=%~dp0scrcpy-win64-v2.4\scrcpy.exe
+set SCRCPY=%~dp0..\scrcpy-win64-v2.4\scrcpy.exe
 
 echo ============================================
 echo   Tecno Pop 4 Pro - Screen Mirror (Scrcpy)

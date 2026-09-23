@@ -50,7 +50,7 @@ goto MENU
 
 :STATUS
 cls
-call "%~dp0status.bat"
+call "%~dp0scripts\status.bat"
 goto MENU
 
 :DASHBOARD
@@ -65,25 +65,22 @@ goto MENU
 
 :ADBSHELL
 cls
-"%ADB%" -s %PHONE_IP%:5555 shell
+call "%~dp0scripts\adb_shell.bat"
 goto MENU
 
 :SSHTERM
 cls
-ssh -p 8022 %PHONE_IP%
-pause
+call "%~dp0scripts\ssh.bat"
 goto MENU
 
 :DEPLOY
 cls
-call "%~dp0deploy.bat"
+call "%~dp0scripts\deploy.bat"
 goto MENU
 
 :AUTOSTART
 cls
 echo [*] Running full startup sequence...
-"%ADB%" connect %PHONE_IP%:5555
-timeout /t 2 /nobreak >nul
-"%ADB%" -s %PHONE_IP%:5555 shell "svc power stayon true; settings put system screen_off_timeout 2147483647"
-call "%~dp0status.bat"
+call "%~dp0scripts\connect.bat"
+call "%~dp0scripts\status.bat"
 goto MENU
